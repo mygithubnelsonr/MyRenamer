@@ -1,0 +1,232 @@
+D:\FS008\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+D:\FS008\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb
+D:\FS008\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe
+D:\FS008\MyRenamer\MyRenamer\bin\Debug\MyRenamer.pdb
+D:\FS008\MyRenamer\MyRenamer\obj\Debug\ResolveAssemblyReference.cache
+D:\FS008\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Renamer.resources
+D:\FS008\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Properties.Resources.resources
+D:\FS008\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.GenerateResource.Cache
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\bin\Debug\MyRenamer.pdb
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\ResolveAssemblyReference.cache
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Renamer.resources
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Properties.Resources.resources
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.GenerateResource.Cache
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\Interop.WMPLib.dll
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.ResolveComReference.cache
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\bin\Debug\Interop.WMPLib.dll
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\bin\Debug\MyRenamer.pdb
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\bin\Debug\Interop.WMPLib.dll
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\ResolveAssemblyReference.cache
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\Interop.WMPLib.dll
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.ResolveComReference.cache
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Renamer.resources
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Properties.Resources.resources
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.GenerateResource.Cache
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.AboutBox.resources
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Splash.resources
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.manifest
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\bin\Debug\MyRenamer.application
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe.manifest
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Debug\MyRenamer.application
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\Interop.WMPLib.dll
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.ResolveComReference.cache
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.manifest
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.application
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.pdb
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\bin\Debug\Interop.WMPLib.dll
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\ResolveAssemblyReference.cache
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.AboutBox.resources
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Renamer.resources
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Properties.Resources.resources
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Splash.resources
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.GenerateResource.Cache
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe.manifest
+W:\.NET\CSharp\_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.application
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\Interop.WMPLib.dll
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.ResolveComReference.cache
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.manifest
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.application
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.pdb
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\bin\Debug\Interop.WMPLib.dll
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csprojResolveAssemblyReference.cache
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.AboutBox.resources
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Renamer.resources
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Properties.Resources.resources
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Splash.resources
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.GenerateResource.Cache
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe.manifest
+W:\10_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.application
+W:\11_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\Interop.WMPLib.dll
+W:\11_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.ResolveComReference.cache
+W:\11_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+W:\11_.NET\CSharp\01_Eigene\_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\Interop.WMPLib.dll
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.ResolveComReference.cache
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.manifest
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.application
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.pdb
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\bin\Debug\Interop.WMPLib.dll
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csprojResolveAssemblyReference.cache
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.AboutBox.resources
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Renamer.resources
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Properties.Resources.resources
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Splash.resources
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.GenerateResource.Cache
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe.manifest
+W:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.application
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.config
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\Interop.WMPLib.dll
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.ResolveComReference.cache
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.manifest
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.application
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.pdb
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\bin\Debug\Interop.WMPLib.dll
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csprojResolveAssemblyReference.cache
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.AboutBox.resources
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Renamer.resources
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Properties.Resources.resources
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Splash.resources
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.GenerateResource.Cache
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe.manifest
+H:\11_.NET\CSharp\01_Eigene\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.application
+C:\Users\nelsonr\Source\Repos\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csprojResolveAssemblyReference.cache
+C:\Users\nelsonr\Source\Repos\Projects01\MyRenamer\MyRenamer\obj\Debug\Interop.WMPLib.dll
+C:\Users\nelsonr\Source\Repos\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.ResolveComReference.cache
+C:\Users\nelsonr\Source\Repos\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.AboutBox.resources
+C:\Users\nelsonr\Source\Repos\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Renamer.resources
+C:\Users\nelsonr\Source\Repos\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Properties.Resources.resources
+C:\Users\nelsonr\Source\Repos\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Splash.resources
+C:\Users\nelsonr\Source\Repos\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.GenerateResource.Cache
+C:\Users\nelsonr\Source\Repos\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.CoreCompileInputs.cache
+C:\Users\nelsonr\Source\Repos\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+C:\Users\nelsonr\Source\Repos\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csprojResolveAssemblyReference.cache
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\obj\Debug\Interop.WMPLib.dll
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.ResolveComReference.cache
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.AboutBox.resources
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Renamer.resources
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Properties.Resources.resources
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Splash.resources
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.GenerateResource.Cache
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.CoreCompileInputs.cache
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.config
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.manifest
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\bin\Debug\MyRenamer.application
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\bin\Debug\MyRenamer.pdb
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\bin\Debug\MyFunctions.dll
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\bin\Debug\System.Data.SQLite.dll
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\bin\Debug\MyFunctions.pdb
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\bin\Debug\Interop.WMPLib.dll
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe.manifest
+C:\Users\bs000f5mu\source\mysource\Projects01\MyRenamer\MyRenamer\obj\Debug\MyRenamer.application
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.config
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.manifest
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.application
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyRenamer.pdb
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyFunctions.dll
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\bin\Debug\System.Data.SQLite.dll
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\bin\Debug\MyFunctions.pdb
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\bin\Debug\Interop.WMPLib.dll
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csprojResolveAssemblyReference.cache
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\obj\Debug\Interop.WMPLib.dll
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.ResolveComReference.cache
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.AboutBox.resources
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Renamer.resources
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Properties.Resources.resources
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Splash.resources
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.GenerateResource.Cache
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.CoreCompileInputs.cache
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe.manifest
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.application
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+C:\Users\bs000f5mu\source\mysource\01_Projects\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\obj\Debug\Interop.WMPLib.dll
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.ResolveComReference.cache
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.AboutBox.resources
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Renamer.resources
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Properties.Resources.resources
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Splash.resources
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.GenerateResource.Cache
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.CoreCompileInputs.cache
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.config
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.manifest
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.application
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.pdb
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\bin\Debug\Interop.WMPLib.dll
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe.manifest
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.application
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csprojResolveAssemblyReference.cache
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\bin\Debug\FunctionPool.dll
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\bin\Debug\System.Data.SQLite.dll
+C:\Users\bs000f5mu\source\mysource\01_Projects\Audio\MyRenamer\MyRenamer\bin\Debug\FunctionPool.pdb
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csprojAssemblyReference.cache
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\Interop.WMPLib.dll
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.ResolveComReference.cache
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.AboutBox.resources
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Renamer.resources
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Properties.Resources.resources
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Splash.resources
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.GenerateResource.cache
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.CoreCompileInputs.cache
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.config
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.manifest
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.application
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.pdb
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\bin\Debug\FunctionPool.dll
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\bin\Debug\System.Data.SQLite.dll
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\bin\Debug\FunctionPool.pdb
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\bin\Debug\Interop.WMPLib.dll
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe.manifest
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.application
+C:\Users\bs000f5mu\source\mysource\01_Projects\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.CopyComplete
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.config
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe.manifest
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.application
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.exe
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\bin\Debug\MyRenamer.pdb
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\bin\Debug\FunctionPool.dll
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\bin\Debug\System.Data.SQLite.dll
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\bin\Debug\FunctionPool.pdb
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\bin\Debug\Interop.WMPLib.dll
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csprojAssemblyReference.cache
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\Interop.WMPLib.dll
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.ResolveComReference.cache
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.AboutBox.resources
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Renamer.resources
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Properties.Resources.resources
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.Splash.resources
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.GenerateResource.cache
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.CoreCompileInputs.cache
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe.manifest
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.application
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.csproj.CopyComplete
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.exe
+A:\Source\Repos\Projects01\01_Audio\MyRenamer\MyRenamer\obj\Debug\MyRenamer.pdb

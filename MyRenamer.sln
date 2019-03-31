@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRenamer", "MyRenamer\MyRenamer.csproj", "{800F0D9E-A64F-4757-B700-A03FA9D6A629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionPool", "..\..\MyFunctions\FunctionPool\FunctionPool.csproj", "{5E8D2814-7DDA-47AD-9739-DC3192F4A5F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{800F0D9E-A64F-4757-B700-A03FA9D6A629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{800F0D9E-A64F-4757-B700-A03FA9D6A629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{800F0D9E-A64F-4757-B700-A03FA9D6A629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{800F0D9E-A64F-4757-B700-A03FA9D6A629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E8D2814-7DDA-47AD-9739-DC3192F4A5F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E8D2814-7DDA-47AD-9739-DC3192F4A5F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E8D2814-7DDA-47AD-9739-DC3192F4A5F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E8D2814-7DDA-47AD-9739-DC3192F4A5F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9607A8AE-0C73-4764-BFF8-DDEC7716D5CB}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

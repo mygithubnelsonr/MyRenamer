@@ -1,0 +1,15 @@
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\bin\Release\MyRenamer.exe
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\bin\Release\MyRenamer.pdb
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Release\ResolveAssemblyReference.cache
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Release\MyRenamer.Renamer.resources
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Release\MyRenamer.Properties.Resources.resources
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Release\MyRenamer.csproj.GenerateResource.Cache
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Release\MyRenamer.exe
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Release\MyRenamer.pdb
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\bin\Release\Interop.WMPLib.dll
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Release\Interop.WMPLib.dll
+W:\C#.NET\_Eigene Projekte\MyRenamer\MyRenamer\obj\Release\MyRenamer.csproj.ResolveComReference.cache
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Release\Interop.WMPLib.dll
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Release\MyRenamer.csproj.ResolveComReference.cache
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Release\MyRenamer.exe
+W:\.NET\CSharp\_Eigene Projekte\MyRenamer\MyRenamer\obj\Release\MyRenamer.pdb
