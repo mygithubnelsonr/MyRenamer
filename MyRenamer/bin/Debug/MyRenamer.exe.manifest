@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OYmnL7O/51IgksDcG1yCK39qENS+TMpkwP8IDW/nzgk=</dsig:DigestValue>
+        <dsig:DigestValue>G6DPaMtsy8XnKHixjAYGznN1IgruvAhzvL7gPwAn03E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,19 +62,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xe9VKX+hlyW181tXGsN++cMg1ndPgBO4Lz1JEGo1kbU=</dsig:DigestValue>
+        <dsig:DigestValue>nIxCt42S1TgvTB2mNrxjqSaatlbSiuLq+4ZoYsA68bc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MyRenamer.exe" size="178176">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MyRenamer.exe" size="503808">
       <assemblyIdentity name="MyRenamer" version="2.1.3.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>EZu5Iw7/YIuz8FciTFieyWccLxCCIiHTo1CGGGSd3/M=</dsig:DigestValue>
+        <dsig:DigestValue>qyapzpi3PEJWAnn7MEOslMJKY6rMbU6JUO/7IOjH1ck=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -90,13 +90,31 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Config.xml" size="256" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0CS187gvRllLeTsBzfV74HxpSn4Qj2p32DBaRMZPIoM=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="MyRenamer.exe.config" size="858">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>4z/Mo+e0DVr1JOCMOEjX1ePSO7GvO6TjRqKhbOxhJ5I=</dsig:DigestValue>
+      <dsig:DigestValue>obn+C7CM/dJaCaHmN0vJpV1FOOWZFMM9/JVh7H2CUT0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Dokument.ico" size="159362">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Xgo4+FgOqP9xzrI4QwEZBzmt99QXgr8iP28qsYBGkpQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\Lines.jpg" size="5231">
@@ -151,6 +169,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>34fIUBZr/bIdKo4ERFKHQLS0AaaiN1DcibfXyaTy1K8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Note.ico" size="159362">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BB5phiyHI+pWRzCQJDNkI9VPzaEDSOVAhPIGZOTWyzo=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

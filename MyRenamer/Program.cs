@@ -15,6 +15,7 @@ namespace MyRenamer
         [STAThread]
         static void Main()
         {
+            #region Mutex
             const string appName = "MyRenamer";
             bool createNew;
 
@@ -25,11 +26,12 @@ namespace MyRenamer
                 //app is already running! Exiting the application
                 return;
             }
+            #endregion
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             Application.Run(new Renamer());
+
         }
     }
 }

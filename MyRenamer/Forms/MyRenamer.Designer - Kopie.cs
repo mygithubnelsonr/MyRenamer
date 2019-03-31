@@ -86,7 +86,6 @@
             this.contextMenuFilesCopyToClipAsDB = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuFilesClear = new System.Windows.Forms.ToolStripMenuItem();
             this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuFilesToProperCase = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.checkBoxPlayOption = new System.Windows.Forms.CheckBox();
@@ -136,7 +135,6 @@
             this.trackBarVolume = new System.Windows.Forms.TrackBar();
             this.trackBarPosition = new System.Windows.Forms.TrackBar();
             this.timerUnselect = new System.Windows.Forms.Timer(this.components);
-            this.menuMainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer1)).BeginInit();
             this.SplitContainer1.Panel1.SuspendLayout();
             this.SplitContainer1.Panel2.SuspendLayout();
@@ -156,18 +154,13 @@
             // menuMainToolStrip
             // 
             this.menuMainToolStrip.BackColor = System.Drawing.Color.LightCyan;
-            this.menuMainToolStrip.Dock = System.Windows.Forms.DockStyle.None;
             this.menuMainToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuMainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuMainFile,
-            this.menuMainTextformat,
-            this.menuMainExtras,
-            this.menuMainHelp});
-            this.menuMainToolStrip.Location = new System.Drawing.Point(2, 2);
+            this.menuMainToolStrip.Location = new System.Drawing.Point(0, 0);
             this.menuMainToolStrip.Name = "menuMainToolStrip";
-            this.menuMainToolStrip.Size = new System.Drawing.Size(214, 24);
+            this.menuMainToolStrip.Size = new System.Drawing.Size(754, 24);
             this.menuMainToolStrip.TabIndex = 1;
             this.menuMainToolStrip.Text = "menuStrip1";
+            this.menuMainToolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuMainToolStrip_ItemClicked);
             // 
             // menuMainFile
             // 
@@ -623,10 +616,9 @@
             this.contextMenuFilesCopyToClip,
             this.contextMenuFilesClear,
             this.selectAllToolStripMenuItem,
-            this.contextMenuFilesToProperCase,
             this.playToolStripMenuItem});
             this.contextMenuFiles.Name = "contextMenuStripFiles";
-            this.contextMenuFiles.Size = new System.Drawing.Size(172, 158);
+            this.contextMenuFiles.Size = new System.Drawing.Size(172, 136);
             // 
             // contextMenuFilesPaste
             // 
@@ -686,13 +678,6 @@
             this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.selectAllToolStripMenuItem.Text = "Select all";
             this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.selectAllToolStripMenuItem_Click);
-            // 
-            // contextMenuFilesToProperCase
-            // 
-            this.contextMenuFilesToProperCase.Name = "contextMenuFilesToProperCase";
-            this.contextMenuFilesToProperCase.Size = new System.Drawing.Size(171, 22);
-            this.contextMenuFilesToProperCase.Text = "To Proper Case";
-            this.contextMenuFilesToProperCase.Click += new System.EventHandler(this.contextMenuFilesToProperCase_Click);
             // 
             // playToolStripMenuItem
             // 
@@ -1148,8 +1133,6 @@
             this.Text = "MyRenamer.NET";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Renamer_FormClosing);
             this.Load += new System.EventHandler(this.Renamer_Load);
-            this.menuMainToolStrip.ResumeLayout(false);
-            this.menuMainToolStrip.PerformLayout();
             this.SplitContainer1.Panel1.ResumeLayout(false);
             this.SplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer1)).EndInit();
@@ -1278,7 +1261,6 @@
         private System.Windows.Forms.ToolStripStatusLabel buttonPlay;
         private System.Windows.Forms.ComboBox ComboBoxFiles;
         private System.Windows.Forms.ColumnHeader columnHeaderSize;
-        private System.Windows.Forms.ToolStripMenuItem contextMenuFilesToProperCase;
     }
 }
 

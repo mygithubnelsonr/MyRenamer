@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,6 +18,9 @@ using NRSoft.FunctionPool;
 /// 27.01.2019  2.1.4   Bugfix, add error handling in Action_File_FindItem, return int -1 if file not found
 /// </summary>
 
+// ToDo weiter geht's mit 
+// 
+
 namespace MyRenamer
 {
     #region class Renamer
@@ -24,8 +28,9 @@ namespace MyRenamer
 	{
         #region private fields
         private const string _company = "NrSoft";
-		private const string _ProductKey = "MyRenamer.net";
-        private const string _Version = "2.1.4";
+		private const string _productKey = "MyRenamer.net";
+        private string _version = Properties.Settings.Default.Version;
+        private const string _logFile = "MyRenamer.log";
         private bool showSplash = false;
 		private ListViewItemComparer listViewItemComparer = new ListViewItemComparer();
         private WindowsMediaPlayer player = new WindowsMediaPlayer();
@@ -33,7 +38,10 @@ namespace MyRenamer
         private GeneralH gh = new GeneralH();
         private FileSystemUtils fh = new FileSystemUtils();
         private string _currentPlaying = "";
-        // private bool _fileExist = false;
+        private string _sourcePath = "";
+        private string _keyRoot = "Software\\" + _company + "\\" + _productKey;
+        private int _logID = -1;
+        private Int64 newID;
         #endregion
 
         #region properties
@@ -44,13 +52,30 @@ namespace MyRenamer
 
         public string ProductKey
         {
-            get { return _ProductKey; }
+            get { return _productKey; }
         }
 
         public string Version
         {
-            get { return _Version; }
+            get { return _version; }
         }
+
+        public string SourcePath
+        {
+            set { _sourcePath = value; }
+        }
+
+        public string Logfile
+        {
+            get { return _logFile; }
+        }
+
+        public int LogID
+        {
+            get { return _logID; }
+            set { _logID = value; }
+        }
+
 
         #endregion
 
@@ -142,6 +167,8 @@ namespace MyRenamer
 
             RestoreSettings();
 
+            InitListViews();
+
             player.settings.volume = trackBarVolume.Value;
             FillCombo(this.ComboBoxFiles, "Mp3DirList");
             FillCombo(this.ComboBoxTitles, "TextFileList");
@@ -160,7 +187,9 @@ namespace MyRenamer
             {
                 player.close();
                 player = null;
+
                 SaveSettings();
+
             }
         }
 
@@ -423,7 +452,7 @@ namespace MyRenamer
             {
                 if (!FormsUtilities.IsMenuChecked(menuMainTextformat))
                 {
-                    MessageBox.Show(new Form { TopMost = true }, "Es muss ein Textformat ausgewählt werden!", "Action_OpenText",
+                    MessageBox.Show(new Form { TopMost = true }, "Es muss ein Textformat ausgewählt werden!", "Renamer - OpenText",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ComboBoxTitles.Text = string.Empty;
                     return;
@@ -481,7 +510,7 @@ namespace MyRenamer
                 if (!di.Exists)
                 {
                     DialogResult result;
-                    result = MessageBox.Show("Folder not found! Delete entry?", "Action_List_Folder", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                    result = MessageBox.Show("Folder not found! Delete entry?", "Renamer - Files", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
                     if (result == DialogResult.Yes)
                     {
                         ComboBoxFiles.Items.Remove(ComboBoxFiles.SelectedItem);
@@ -543,11 +572,24 @@ namespace MyRenamer
             timerMusic.Stop();
             trackBarPosition.Value = 0;
 
-            if (ComboBoxFiles.Text.Trim().Length > 0)
-                PrepareFileList(ComboBoxFiles.Text);
+            string path = ComboBoxFiles.Text;
+            ComboBoxFiles.BackColor = Color.PaleTurquoise;
+
+            if (String.IsNullOrEmpty(path))    // && Directory.Exists(path) == false)
+            {
+                listViewFiles.Items.Clear();
+            }
             else
             {
-                this.listViewFiles.Items.Clear();
+                if (Directory.Exists(path) == true)
+                {
+                    ComboBoxFiles.BackColor = Color.PaleTurquoise;
+                    //PrepareFileList(ComboBoxFiles.Text);
+                }
+                else
+                {
+                    ComboBoxFiles.BackColor = Color.LightPink;
+                }
             }
         }
         
@@ -584,7 +626,7 @@ namespace MyRenamer
         {
             if (!FormsUtilities.IsMenuChecked(menuMainTextformat))
             {
-                MessageBox.Show("Es muss ein Textformat ausgewählt werden!", "Action_OpenText");
+                MessageBox.Show("Es muss ein Textformat ausgewählt werden!", "Renamer - OpenText");
                 return;
             }
 
@@ -662,8 +704,13 @@ namespace MyRenamer
 
         private void menuMainExtrasTestOnly_Click(object sender, EventArgs e)
         {
-            int itemNr = Action_File_FindItem("Kingston Trio - Tom Dooley");
-            listViewFiles.Items[itemNr].Selected = false;
+            // int itemNr = Action_File_FindItem("Kingston Trio - Tom Dooley");
+            // listViewFiles.Items[itemNr].Selected = false;
+            
+            int renameID = (int)Registry.GetValue(Registry.CurrentUser.Name + "\\" + _keyRoot + "\\Settings", "renameID", - 1);
+            var val = rh.GetSetting("Settings", "renameID", "-1");
+            renameID = Convert.ToInt16(val);
+            Debug.Print(val.ToString());
         }
 
         private void menuMainExtrasPlayBackPlay_Click(object sender, EventArgs e)
@@ -883,41 +930,40 @@ namespace MyRenamer
 
             DateTime dT2 = DateTime.Now;
 
-            rh.SaveSetting("Settings", "Version", _Version);
+            rh.SaveSetting("Settings", "Version", _version);
             rh.SaveSetting("Settings", "LastRun", dT2.ToString());
             rh.SaveSetting("Settings", "ForbChars", "\\/:?");
 
         }
 
+        /// <summary>
+        /// initialize from and settings on start
+        /// </summary>
         private void RestoreSettings()
         {
-            // initialize on start
-
-            string co = Company;
-            string pn = ProductName;
-            string ve = Version;
-            int value = 0;
+            int retVal;
 
             rh.CompanyName = Company;
             rh.ProductName = ProductName;
 
-            if (String.IsNullOrEmpty(rh.GetSetting("Settings", "Version", "")))
+            if (rh.GetSetting("Settings", "Version", "") != null)
             {
                 InitSettings();
             }
 
-            DateTime dT2 = DateTime.Now;
-            rh.SaveSetting("Settings", "Version", ve);
-            rh.SaveSetting("Settings", "LastRun", dT2.ToString());
+            rh.SaveSetting("Settings", "Version", Version);
+            rh.SaveSetting("Settings", "LastRun", DateTime.Now.ToString());
 
             // restore last settings
-            value = Convert.ToInt16(rh.GetSetting(@"Settings\Form", "Top", "100"));
-            this.Top = value <= 0 ? 100 : value;
-            value = Convert.ToInt16(rh.GetSetting(@"Settings\Form", "Left", "100"));
-            this.Left = value <=0 ? 100 : value;
+            retVal = Convert.ToInt16(rh.GetSetting(@"Settings\Form", "Top", "100"));
+            this.Top = retVal <= 0 ? 100 : retVal;
+            retVal = Convert.ToInt16(rh.GetSetting(@"Settings\Form", "Left", "100"));
+            this.Left = retVal <=0 ? 100 : retVal;
             this.Width = Convert.ToInt16(rh.GetSetting(@"Settings\Form", "Width", "100"));
             this.Height = Convert.ToInt16(rh.GetSetting(@"Settings\Form", "Height", "100"));
-            SplitContainer1.SplitterDistance = Convert.ToInt16(rh.GetSetting("Settings\\Form", "Splitter", (this.Width / 2).ToString()));
+            string defaultvalue = (this.Width / 2).ToString();
+            retVal = Convert.ToInt16(rh.GetSetting("Settings\\Form", "Splitter", defaultvalue));
+            SplitContainer1.SplitterDistance = retVal;
             trackBarVolume.Value = Convert.ToInt16(rh.GetSetting("Settings", "Volume","0"));
         }
 
@@ -1206,7 +1252,7 @@ namespace MyRenamer
 
             if (!FormsUtilities.IsMenuChecked(this.menuMainTextformat))
             {
-                MessageBox.Show("Es muss ein Textformat ausgewählt werden!", "Action_Text_Paste");
+                MessageBox.Show("Es muss ein Textformat ausgewählt werden!", "Renamer - Text_Paste");
                 return;
             }
 
@@ -1227,7 +1273,7 @@ namespace MyRenamer
 
             rh.SaveSetting("Settings\\Pfade", "LastTextFile", "Clipboard");
 
-            string fileName = String.Concat(Path.GetTempPath(), "MyRenamer.log");
+            string fileName = String.Concat(Path.GetTempPath(),_logFile);
 
             StreamWriter fs = new StreamWriter(fileName, true);
 
@@ -1285,7 +1331,7 @@ namespace MyRenamer
 
                     if (bForbChars == true)
                     {
-                        MessageBox.Show("Beim Einlesen wurden unerlaubte Zeichen gefunden!", "Unerlaubtes Zeichen " + strVorbidden);
+                        MessageBox.Show("Beim Einlesen wurden unerlaubte Zeichen gefunden!", "Renamer - Text" + strVorbidden);
                     }
 
 
@@ -1318,31 +1364,36 @@ namespace MyRenamer
 
         private void Action_File_RenameDo()
         {
-            string strNr = "";
-            string strTitel = "";
-            int n;
-            int intSec = 0;
-            int intMin;
-            int intStd;
-            Int64 int64id = 0;
-            string strDate = "";
+            string strNr = "", strDate = "", strTitel = "", keyPath = "";
+            int n = 0, intSec = 0, intMin = 0, intStd = 0;
+            bool renameSuccess = false;
 
             ///
             /// Save Settings for the Undo Function
             ///
             /// delete old settings
             ///
-            string keyPath = "Software\\" + _ProductKey + "\\Settings\\Names";
+
+            string path = ComboBoxFiles.Text;
+
+            if(!Directory.Exists(path))
+            {
+                MessageBox.Show("Source folder not found!","Renamer - File");
+                return;
+            }
+
+            keyPath = _keyRoot + "\\Settings\\Names";
             rh.DeleteSubKeyTree(RegistryRootKeys.HKEY_CURRENT_USER, keyPath);
 
-            keyPath = "Software\\" + _ProductKey + "\\Settings\\Files";
+            keyPath = _keyRoot + "\\Settings\\Files";
             rh.DeleteSubKeyTree(RegistryRootKeys.HKEY_CURRENT_USER, keyPath);
+            
             ///
             ///	write new setting
             ///
             foreach (ListViewItem itmNames in this.listViewNames.Items)
             {
-                strNr = itmNames.Text;
+                strNr = String.Format(itmNames.Text,"00");
                 strTitel = itmNames.SubItems[1].Text;
                 rh.SaveSetting("Settings\\Names", strNr, strTitel);
             }
@@ -1352,55 +1403,66 @@ namespace MyRenamer
 
             foreach (ListViewItem itmFiles in this.listViewFiles.Items)
             {
-                strNr = itmFiles.Text;
+                strNr = String.Format(itmFiles.Text,"00");
                 strTitel = itmFiles.SubItems[1].Text;
                 rh.SaveSetting("Settings\\Files", strNr, strTitel);
             }
 
-            //    '
-            //    ' Log schreiben und file umbenennen
-            //    '
+            //
+            // Log schreiben und file umbenennen
+            //
+
             string renameID = "";
-            keyPath = "Software\\" + _ProductKey + "\\Settings";
+            keyPath = _keyRoot + "\\Settings";
 
             try
             {
-                object retVal = rh.ReadValue(RegistryRootKeys.HKEY_CURRENT_USER, keyPath, "renameID", 1);
-                Int64 id = Convert.ToInt64(retVal);
-                id += 1;
-                int64id = id;
-                renameID = id.ToString("00000");
+                var retVal = rh.GetSetting("Settings", "renameID", "-1");
+                newID = Convert.ToInt64(retVal);
+                newID += 1;
+                renameID = newID.ToString("00000");
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
+                return;
             }
 
 			string sT1, strPfad, strFileNameOld, strExt;
 			string oldDate;
-			string fileName = String.Concat(gh.ValidatePath(Application.StartupPath), "MyRenamer.log");
+			string fileName = String.Concat(gh.ValidatePath(Application.StartupPath), _logFile);
 
-            StreamWriter fs = new StreamWriter(fileName, true);
+            DateTime timestamp = new DateTime();
+            timestamp = DateTime.UtcNow;
 
+            strDate = timestamp.ToShortDateString();
+            intStd = timestamp.Hour;
+            intMin = timestamp.Minute;
+
+            // olddate is not avaiable on redo action
 			oldDate = this.listViewFiles.Items[0].SubItems[3].Text;
-			// sT1 = oldDate.Substring(0, oldDate.Length - 2);
-			strDate = oldDate.Substring(0, 10);
-			sT1 = oldDate.Substring(11, 2);
-			intStd = Convert.ToInt32(oldDate.Substring(11, 2));
-			sT1 = oldDate.Substring(14, 2);
-			intMin = Convert.ToInt32(oldDate.Substring(14, 2));
-			strPfad = this.ComboBoxFiles.Text + "\\";
+            if (!String.IsNullOrEmpty(oldDate))
+            {
+                strDate = oldDate.Substring(0, 10);
+                sT1 = oldDate.Substring(11, 2);
+                intStd = Convert.ToInt32(oldDate.Substring(11, 2));
+                sT1 = oldDate.Substring(14, 2);
+                intMin = Convert.ToInt32(oldDate.Substring(14, 2));
+            }
+            
+            strPfad = gh.ValidatePath(ComboBoxFiles.Text);
 
-			fs.WriteLine("[{0}] [{1}] source {2}", DateTime.UtcNow, renameID, strPfad);
+            ArrayList logEntries = new ArrayList();
 
+            logEntries.Add(String.Format("[{0}] [{1}] source {2}", timestamp, renameID, strPfad));
+            
             strTitel = "";
 			foreach ( ListViewItem itmNames in this.listViewNames.Items)
 			{
 				n = itmNames.Index;
-				
 				ListViewItem itmFiles = listViewFiles.Items[n];
 
-				strExt = itmFiles.SubItems[2].Text.ToLower();
+				strExt = "." + itmFiles.SubItems[2].Text.ToLower();
 				strTitel = itmNames.SubItems[1].Text;
 				strFileNameOld = itmFiles.SubItems[1].Text + strExt;
 
@@ -1414,91 +1476,118 @@ namespace MyRenamer
 				string sT2 = (strDate + " " + intStd.ToString("00") + ":" + intMin.ToString("00") + ":" + intSec.ToString("00"));
 				DateTime dT2 = DateTime.Parse(sT2);
 
-                fs.WriteLine("[{0}] [{1}] {2}", dT2, renameID, ("rename \"" + strFileNameOld + "\" ==> \"" + strTitel + strExt + "\""));
+                logEntries.Add(String.Format("[{0}] [{1}] {2}", dT2, renameID, ("rename \"" + strFileNameOld + "\" ==> \"" + strTitel + strExt + "\"")));
+
 				// alten titel umbenennen
 				try
 				{
 					File.Move(strPfad + strFileNameOld, strPfad + strTitel + strExt);
 					bool retval = fh.TouchFile(strPfad + strTitel + strExt, sT2);
 					itmFiles.SubItems[1].Text = strTitel;
+                    itmFiles.BackColor = Color.FromArgb(185,250,185);
+                    renameSuccess = true;
 				}
 				catch
 				{
-					itmFiles.BackColor = Color.Salmon;
-                    itmFiles.ForeColor = Color.DarkGray;
+					itmFiles.BackColor = Color.MistyRose;
+                    itmFiles.ForeColor = Color.DarkBlue;
+                    renameSuccess = false;
 				}
 			}
-            fs.Close();
 
-            rh.SetValue(RegistryRootKeys.HKEY_CURRENT_USER, keyPath, "renameID", int64id, true, RegistryValueKind.DWord);
-            for (n = 0; n < listViewFiles.Columns.Count; ++n)
+            if (renameSuccess == true)
             {
-                listViewFiles.AutoResizeColumn(n, ColumnHeaderAutoResizeStyle.ColumnContent);
-            }
+                StreamWriter writer = new StreamWriter(fileName, true);
+                foreach (string line in logEntries)
+                {
+                    writer.WriteLine(line);
+                }
+                writer.Close();
 
-            this.SplitContainer1.BackColor = Color.Salmon;
+                newID = Convert.ToInt64(renameID);
+
+                keyPath = _keyRoot + "\\Settings";
+
+                rh.SetValue(RegistryRootKeys.HKEY_CURRENT_USER, keyPath, "renameID", newID, true, RegistryValueKind.DWord);
+
+                for (n = 0; n < listViewFiles.Columns.Count; ++n)
+                {
+                    listViewFiles.AutoResizeColumn(n, ColumnHeaderAutoResizeStyle.ColumnContent);
+                }
+
+                SplitContainer1.BackColor = Color.Salmon;
+            }
+            else
+            {
+                MessageBox.Show("File rename failed!", "File_Rename");
+            }
         }
 
         private void Action_File_RenamePrepUndo()
         {
-            ArrayList al;
-            Collection<string[]> col = new Collection<string[]>();
-            string keyPath;
+            StreamReader reader;
+            List<string> logdates = new List<string>();
+            List<Tracks> listNames = new List<Tracks>();
+            List<Tracks> listFiles = new List<Tracks>();
 
             listViewNames.Items.Clear();
             listViewFiles.Items.Clear();
+            SplitContainer1.BackColor = Color.Silver;
             ComboBoxFiles.Text = "";
             ComboBoxTitles.Text = "";
 
-            ///
-            /// read registry settings for undo function
-            ///
-            keyPath = "Software\\" + _ProductKey + "\\Settings\\Files";
-            al = rh.GetAllSettings(RegistryRootKeys.HKEY_CURRENT_USER, keyPath);
+            Choose choose = new Choose();
 
-            if (al.Count == 0) return;
+            int x = Location.X + 60;
+            int y = Location.Y + 120;
+            choose.Location = new Point(x, y);
+            choose.ShowDialog(this);
+            LogID = choose.LogID;
 
-            foreach (string[] oar in al)
+            choose.Close();
+            choose.Dispose();
+
+            if (LogID <= 0) return;
+
+            string renameID = LogID.ToString("00000");
+            string sourcePath = "";
+            string line;
+            reader = new StreamReader(_logFile);
+
+            while (!reader.EndOfStream)
             {
-                col.Add(new string[] {oar[0].ToString(), oar[1].ToString()});
+                line = reader.ReadLine();
+
+                if (line.IndexOf(renameID) > 0 && line.IndexOf("source") > 0)
+                {
+                    int i = line.IndexOf("source") + "source".Length + 1;
+                    sourcePath = line.Substring(i, line.Length - i);
+                }
+
+                if (line.IndexOf(renameID) > 0 && line.IndexOf("rename") > 0)
+                {
+                    string[] ar = line.Split('"');
+                    string nam = ar[1].Replace("\"", "");
+                    listNames.Add(new Tracks { name = nam.Replace(".mp3", "") });
+
+                }
+
+                if (line.IndexOf(renameID) > 0 && line.IndexOf("==>") > 0)
+                {
+                    string[] ar = line.Split('"');
+                    string fil = ar[3].Replace("\"", "");
+                    listFiles.Add(new Tracks { name = fil.Replace(".mp3", ""), extension = "mp3" });
+                }
             }
 
-            FillListView(listViewNames, col);
-            this.statusStripNamecount.Text = listViewNames.Items.Count.ToString();
-            ComboBoxTitles.Text = "*** Restored List ***";
+            reader.Close();
+            reader.Dispose();
 
-            ComboBoxFiles.Text = rh.GetSetting("Settings\\Pfade", "LastMp3Dir", "");
-            keyPath = "Software\\" + _ProductKey + "\\Settings\\Names";
-            al = rh.GetAllSettings(RegistryRootKeys.HKEY_CURRENT_USER, keyPath);
+            ComboBoxFiles.Text = sourcePath;
 
-            string checkFile = "";
-            col.Clear();
-            foreach (string[] oar in al)
-            {
-                checkFile = ComboBoxFiles.Text + "\\" + oar[1].ToString() + ".mp3";
-                Console.WriteLine(checkFile);
-                break;
-            }
+            FillListView(listViewNames, listNames);
+            FillListView(listViewFiles, listFiles);
 
-            string strFileDate = "";
-            if (File.Exists(checkFile))
-            {
-                FileInfo fi = new FileInfo(checkFile);
-                strFileDate = fi.CreationTime.ToUniversalTime().ToString();
-            }
-            else
-            {
-                return;
-            }
-
-            col.Clear();
-            foreach (object[] oar in al)
-            {
-                col.Add(new string[] { oar[0].ToString(), oar[1].ToString(), ".mp3", strFileDate });
-            }
-
-            FillListView(listViewFiles, col);
-            this.statusStripFilecount.Text = listViewFiles.Items.Count.ToString();
         }
 
         public void Action_File_Paste()
@@ -1519,6 +1608,11 @@ namespace MyRenamer
 
                 ComboBoxFiles.Text = strFolder;
             }
+            else if(Clipboard.ContainsText())
+            {
+                ComboBoxFiles.Text = Clipboard.GetText();
+            }
+
         }
 
         public void Action_File_SelectAll()
@@ -1672,20 +1766,21 @@ namespace MyRenamer
             this.EnableRename();
         }
 
-        internal string Action_Text_ReadFile(string strFileName)
+        internal string Action_Text_ReadFile(string fileName)
         {
             string strText = "";
-			if (File.Exists(strFileName))
+			if (File.Exists(fileName))
 			{
-				StreamReader fileToLoad = new StreamReader(strFileName);
-				strText = fileToLoad.ReadToEnd();
-				fileToLoad.Close();
+				StreamReader reader = new StreamReader(fileName);
+				strText = reader.ReadToEnd();
+				reader.Close();
+                reader.Dispose();
 			}
 			else
 			{
-				if (strFileName != "")
+				if (fileName != "")
 				{
-					strText = strFileName;
+					strText = fileName;
 				}
 			}
 			return strText;
@@ -1697,53 +1792,49 @@ namespace MyRenamer
         /// <param name="strFolder"></param>
         private void PrepareFileList(string strFolder)
         {
-            // listViewFiles.ForeColor = Color.White;
-            listViewFiles.Font = new Font(listViewFiles.Font, FontStyle.Regular);
-
-            if (strFolder.Trim().Length == 0)
-                return;
-
-            Collection<string[]> col = new Collection<string[]>();
-
             string strNr = "";
             string strFileName = "";
             string strFileExtension = "";
-            string strFileExtensionLow = "";
+            string strExtension = "";
             string strFileDate = "";
             string strFileSize = "";
+
+            List<Tracks> tracks = new List<Tracks>();
+
+            // listViewFiles.ForeColor = Color.White;
+            listViewFiles.Font = new Font(listViewFiles.Font, FontStyle.Regular);
+
+            if (strFolder.Trim().Length == 0) return;
 
             DirectoryInfo di;
             di = new DirectoryInfo(strFolder);
 
-            if (!di.Exists)
-            {
-                return;
-            }
+            if (!di.Exists) return;
 
-            FileInfo[] filearray = di.GetFiles();
+            var fileinfos = di.GetFiles("*.mp3").Concat(di.GetFiles("*.wav"));
+
             int cnt = 1;
 
-            foreach (FileInfo fi in filearray)
+            foreach (FileInfo fi in fileinfos)
             {
                 if (fi.Exists)
                 {
-                    strFileExtension = fi.Extension;
-                    strFileExtensionLow = fi.Extension.ToLower();
-                    if (strFileExtensionLow == ".mp3" || strFileExtensionLow == ".wav")
-                    {
-                        strNr = cnt.ToString("00");
-                        strFileName = fi.Name.Replace(strFileExtension, "");
-                        strFileDate = fi.CreationTime.ToUniversalTime().ToString();
-                        strFileSize = (fi.Length / 1024).ToString("###,### KB");
-                        string[] ar = new String[] { strNr, strFileName, strFileExtensionLow, strFileDate, strFileSize };
-                        col.Add(ar);
-                        cnt++;
-                    }
+                    strExtension = fi.Extension.ToLower();
+                    strNr = cnt.ToString("00");
+                    strFileName = fi.Name.Replace(strExtension, "");
+                    strFileDate = fi.CreationTime.ToUniversalTime().ToString();
+                    strFileSize = (fi.Length / 1024).ToString("###,### KB");
+                    tracks.Add(new Tracks { nr = strNr, name = strFileName, extension = strExtension.Replace(".", ""),
+                                        fileDate = strFileDate, fileSize = strFileSize });
+
+                    cnt++;
                 }
             }
            
             rh.SaveSetting("Settings\\Pfade", "LastMp3Dir", ComboBoxFiles.Text);
-            FillListView(this.listViewFiles, col);
+            // FillListView(listViewFiles, col);
+            FillListView(listViewFiles, tracks);
+
             this.statusStripFilecount.Text = listViewFiles.Items.Count.ToString();
         }
 
@@ -1755,6 +1846,8 @@ namespace MyRenamer
                 return;
 
             int n = FormsUtilities.GetCheckedMenuItem(menuMainTextformat);
+
+            List<Tracks> listTracks = new List<Tracks>();
 
             Collection<string[]> col = new Collection<string[]>();
 
@@ -1786,7 +1879,7 @@ namespace MyRenamer
 					// Menü DB
 					if (sFileName.IndexOf((char)4) > 0)
 					{
-						MessageBox.Show("seams this is a CD formated text!", "Readerror");
+						MessageBox.Show("seams this is a CD formated text!", "Renamer - File");
 						readerror = true;
 						return;
 					}
@@ -1799,7 +1892,8 @@ namespace MyRenamer
 				return;
 
             rh.SaveSetting("Settings\\Pfade", "LastTextFile", ComboBoxTitles.Text);
-            FillListView(listViewNames, col);
+            FillListView(listViewNames, listTracks);
+
             this.statusStripNamecount.Text = listViewNames.Items.Count.ToString();
 
             string strVorbidden = "";
@@ -1831,7 +1925,7 @@ namespace MyRenamer
             int n;
             string c = "";
 
-            string strForbChars = rh.GetSetting("Settings", "ForbChars", "\\/:?");
+            string strForbChars = (string)rh.GetSetting("Settings", "ForbChars", "\\/:?");
 
             for (n = 0; n < strForbChars.Length; ++n)
             {
@@ -1846,43 +1940,50 @@ namespace MyRenamer
             return c;
         }
         
-        internal void FillCombo(ComboBox combo, string sSection)
+        internal void FillCombo(ComboBox combo, string key)
         {
-            string sReg;
             string[] ar;
 
             combo.Items.Clear();
             combo.Items.Add("");
-            sReg = rh.GetSetting(@"Settings\Pfade", sSection, "");
-            if (sReg == "")
-               return;
-            ar = sReg.Split(new string[] {";"}, StringSplitOptions.RemoveEmptyEntries);
+            var regval = (string)rh.GetSetting(@"Settings\Pfade", key, "");
+            if (String.IsNullOrEmpty(regval)) return;
+            ar = regval.Split(new string[] {";"}, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (string element in ar)
             {
                 if (element.Trim() != "")
                     Add2combo(combo, element);
             }
-            
             combo.SelectedItem = 0;
         }
 
-        private void FillListView(ListView LV, Collection<string[]> col)
+        private void FillListView(ListView LV, List<Tracks> listTracks)
         {
             ListViewItem itmX;
+            int imageIndex = 0;
+
+            if (LV.Name == "listViewNames")
+                imageIndex = 0;
+
+            if (LV.Name == "listViewFiles")
+                imageIndex = 1;
 
             LV.Items.Clear();
             LV.BeginUpdate();
-            
-            foreach (string[] ar in col)
-            {
-                itmX = LV.Items.Add(ar[0].ToString());
-                itmX.ImageIndex = 0;
 
-                for (int m = 1; m < ar.Length; ++m)
-                {
-                    itmX.SubItems.Add(ar[m]);
-                }
+            int m = 1;
+
+            foreach (Tracks track in listTracks)
+            {
+                itmX = LV.Items.Add(m.ToString("00"));
+                itmX.ImageIndex = 0;
+                itmX.SubItems.Add(track.name);
+                itmX.SubItems.Add(track.extension);
+                itmX.SubItems.Add(track.fileDate);
+                itmX.SubItems.Add(track.fileSize);
+                itmX.ImageIndex = imageIndex;
+                m++;
             }
 
             LV.EndUpdate();
@@ -1895,28 +1996,26 @@ namespace MyRenamer
             EnableRename();
         }
 
-        private void FillListView(ListView LV, string[] col)
+        public void InitListViews()
         {
-            ListViewItem itmX;
-            int i = 0;
-            LV.Items.Clear();
-            LV.BeginUpdate();
 
-            foreach (string fil in col)
-            {
-                itmX = LV.Items.Add(i.ToString());
-                itmX.ImageIndex = 0;
-                itmX.SubItems.Add(fil);
-            }
+            // Create the ListView image lists.
+            ImageList smallImageList = new ImageList();
+            smallImageList.ImageSize = new Size(16, 16);
+            ImageList largeImageList = new ImageList();
+            largeImageList.ImageSize = new Size(32, 32);
 
-            LV.EndUpdate();
+            // Load the document icon.
+            Icon doc = Properties.Resources.Dokument;
+            Icon note = Properties.Resources.Note;
 
-            for (int n = 0; n < LV.Columns.Count; ++n)
-            {
-                LV.AutoResizeColumn(n, ColumnHeaderAutoResizeStyle.ColumnContent);
-            }
-
-            EnableRename();
+            smallImageList.Images.Add(doc);
+            largeImageList.Images.Add(doc);
+            this.listViewNames.SmallImageList = smallImageList;
+            
+            smallImageList.Images.Add(note);
+            largeImageList.Images.Add(note);
+            this.listViewFiles.SmallImageList = smallImageList;
         }
 
         private void EnableRename()
@@ -2088,6 +2187,14 @@ namespace MyRenamer
 
         #endregion public Methodes
 
+        private void contextMenuFilesToProperCase_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem li in listViewFiles.SelectedItems)
+            {
+                string strText = FormsUtilities.ToProperCase(li.SubItems[1].Text);
+                li.SubItems[1].Text = strText;
+            }
+        }
     }
     #endregion class Renamer
 

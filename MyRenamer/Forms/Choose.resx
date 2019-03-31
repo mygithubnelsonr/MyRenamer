@@ -117,47 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MyRenamer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyRenamer.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ToolbarBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ToolbarBack.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ARROWDN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ARROWDN.ICO;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blank.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MyRename" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyRename.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ARROWUP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ARROWUP.ICO;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lines1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lines1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lines" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lines2.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mp3_player_music_next_playing_recordings_song_sound_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\mp3_player_music_next_playing_recordings_song_sound-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mp3_player_music_pause_playing_recordings_song_sound_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\mp3_player_music_pause_playing_recordings_song_sound-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mp3_player_music_play_playing_recordings_song_sound_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\mp3_player_music_play_playing_recordings_song_sound-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mp3_player_music_stop_recordings_song_sound_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\mp3_player_music_playing_recordings_song_sound_stop-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Dokument" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\dokument.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\note.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

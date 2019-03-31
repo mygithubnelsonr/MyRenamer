@@ -59,6 +59,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FunctionPool">
+      <HintPath>..\..\FunctionPool\bin\Debug\FunctionPool.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -83,11 +86,18 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config.cs" />
     <Compile Include="Forms\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Choose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Choose.Designer.cs">
+      <DependentUpon>Choose.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MyRenamer.cs">
       <SubType>Form</SubType>
@@ -98,9 +108,18 @@
     <Compile Include="PlayList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Tracks.cs" />
     <EmbeddedResource Include="Forms\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Choose.resx">
+      <DependentUpon>Choose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MyRenamer.resx">
       <DependentUpon>MyRenamer.cs</DependentUpon>
@@ -121,11 +140,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -168,11 +182,14 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config.xml" />
+    <Content Include="Resources\Dokument.ico" />
     <Content Include="Resources\Lines.jpg" />
     <Content Include="Resources\Mp3_player_music_next_playing_recordings_song_sound-128.png" />
     <Content Include="Resources\Mp3_player_music_pause_playing_recordings_song_sound-128.png" />
     <Content Include="Resources\Mp3_player_music_playing_recordings_song_sound_stop-128.png" />
     <Content Include="Resources\Mp3_player_music_play_playing_recordings_song_sound-128.png" />
+    <Content Include="Resources\Note.ico" />
     <None Include="Resources\Lines2.jpg" />
     <None Include="Resources\Lines1.jpg" />
   </ItemGroup>
@@ -207,12 +224,6 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\MyFunctions\FunctionPool\FunctionPool.csproj">
-      <Project>{5e8d2814-7dda-47ad-9739-dc3192f4a5f6}</Project>
-      <Name>FunctionPool</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

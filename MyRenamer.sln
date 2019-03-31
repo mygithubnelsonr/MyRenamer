@@ -4,8 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRenamer", "MyRenamer\MyRenamer.csproj", "{800F0D9E-A64F-4757-B700-A03FA9D6A629}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5E8D2814-7DDA-47AD-9739-DC3192F4A5F6} = {5E8D2814-7DDA-47AD-9739-DC3192F4A5F6}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionPool", "..\..\MyFunctions\FunctionPool\FunctionPool.csproj", "{5E8D2814-7DDA-47AD-9739-DC3192F4A5F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionPool", "..\FunctionPool\FunctionPool.csproj", "{5E8D2814-7DDA-47AD-9739-DC3192F4A5F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

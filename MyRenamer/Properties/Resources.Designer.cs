@@ -91,6 +91,16 @@ namespace MyRenamer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Dokument {
+            get {
+                object obj = ResourceManager.GetObject("Dokument", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Lines {
@@ -166,6 +176,16 @@ namespace MyRenamer.Properties {
         internal static System.Drawing.Icon MyRenamer {
             get {
                 object obj = ResourceManager.GetObject("MyRenamer", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Note {
+            get {
+                object obj = ResourceManager.GetObject("Note", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
